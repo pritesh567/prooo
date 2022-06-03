@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "343700539424",
+    "project_id": "instatool-693ed",
+    "storage_bucket": "instatool-693ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343700539424:android:97edee9e72eed1bb731445",
+        "android_client_info": {
+          "package_name": "com.proin_sta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343700539424-3eol5id2ova75f8hg5cd7fd171qgr5rq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.proin_sta",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "343700539424-9ja4dodi3qark0dt9ufnt8rocenlgbci.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6Iwr0A3TlHubwmW6neOUE8AjY5jYpE1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343700539424-9ja4dodi3qark0dt9ufnt8rocenlgbci.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

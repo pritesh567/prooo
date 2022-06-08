@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import User from 'react-native-vector-icons/MaterialCommunityIcons';
 import Simple from 'react-native-vector-icons/SimpleLineIcons';
 // import OtpInputs from 'react-native-otp-inputs';
-//import OTPInputView from '@twotalltotems/react-native-otp-input';
+// import OTPInputView from '@twotalltotems/react-native-otp-input';
 import LinearGradient from 'react-native-linear-gradient';
 
 
@@ -52,7 +52,6 @@ export default function App() {
   }
 
  
-  
 
   return (<>
 

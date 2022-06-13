@@ -31,7 +31,7 @@ import Forgot from './src/Screens/Forgot'
 import Reset from './src/Screens/Reset'
 import Dpcreator from './src/Screens/Dpcreator'
 import Otp from './src/Screens/Otp'
-import Swipephoto from './src/Screens/Swipephoto'
+
 
 
 
@@ -59,15 +59,15 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-      <Stack.Screen options={{ headerShown: false }} name="Swipephoto" component={Swipephoto} />
-
+      {/* <Stack.Screen options={{ headerShown: false }} name="Swipephoto" component={Swipephoto} /> */}
+      
       <Stack.Screen options={{ headerShown: false }} name="Login" component={Login} />
       <Stack.Screen options={{ headerShown: false }} name="Dpcreator" component={Dpcreator} />
 
       <Stack.Screen options={{ headerShown: false }} name="Signup" component={Signup} />
       <Stack.Screen options={{ headerShown: false }} name="Forgot" component={Forgot} />
       <Stack.Screen options={{ headerShown: false }} name="Reset" component={Reset} />
-
+      <Stack.Screen options={{ headerShown: false }} name="Otp" component={Otp} />
 
 
       <Stack.Screen options={{ headerShown: false }} name="Homepage" component={Homepage} />
@@ -95,7 +95,7 @@ function App() {
         <Stack.Screen options={{ headerShown: false }} name="Dpsaverone" component={Dpsaverone} />
         <Stack.Screen options={{ headerShown: false }} name="Home1" component={HomeScreen} />
         <Stack.Screen options={{ headerShown: false }} name="Home2" component={Screen2} />
-      <Stack.Screen options={{ headerShown: false }} name="Otp" component={Otp} />
+      {/* <Stack.Screen options={{ headerShown: false }} name="Otp" component={Otp} /> */}
 
       </Stack.Navigator>
     </NavigationContainer>

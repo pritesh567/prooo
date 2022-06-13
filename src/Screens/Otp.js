@@ -29,27 +29,27 @@ export default function App() {
   const [pin3, setPin3] = useState(false);
   const [pin4, setPin4] = useState(false);
 
-  const ForgotPassword = () =>{
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
+  // const ForgotPassword = () =>{
+  //   var myHeaders = new Headers();
+  //   myHeaders.append("Content-Type", "application/json");
     
-    var raw = JSON.stringify({
-      "code": 6266
-    });
+  //   var raw = JSON.stringify({
+  //     "code": 6266
+  //   });
     
-    var requestOptions = {
-      method: 'POST',
-      headers: myHeaders,
-      body: raw,
-      redirect: 'follow'
-    };
+  //   var requestOptions = {
+  //     method: 'POST',
+  //     headers: myHeaders,
+  //     body: raw,
+  //     redirect: 'follow'
+  //   };
     
-    fetch("http://13.127.119.21:5000/user/otp-verification", requestOptions)
-      .then(response => response.json())
-      .then(result => console.log(result))
-      .catch(error => console.log('error', error));
+  //   fetch("http://13.127.119.21:5000/user/otp-verification", requestOptions)
+  //     .then(response => response.json())
+  //     .then(result => console.log(result))
+  //     .catch(error => console.log('error', error));
     
-  }
+  // }
 
  
 
@@ -186,7 +186,7 @@ export default function App() {
     })}
 /> */}
 
-<TouchableOpacity onPress={ForgotPassword}>
+<TouchableOpacity>
       <View style={{ alignItems: 'center', marginTop: 80, borderRadius: 20, borderWidth: 1, padding: 20, backgroundColor: '#0164FF', borderColor: '#1589FF', width: '90%' }}>
         <Text style={{ color: '#BFF4FF', fontSize: 18, fontFamily: 'Poppins-Regular', fontWeight: '500' }}>Submit</Text>
       </View>

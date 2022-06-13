@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, FlatList, Button, ScrollView, TouchableOpacity,
 import Icon from 'react-native-vector-icons/Ionicons';
 import User from 'react-native-vector-icons/MaterialCommunityIcons';
 import Simple from 'react-native-vector-icons/SimpleLineIcons';
+import OTP from './/Otp'
 
 
 
@@ -36,7 +37,7 @@ export default function Forgot({ navigation }) {
     fetch("http://13.127.119.21:5000/user/forget-password", requestOptions)
       .then(response => response.json())
       .then(result => console.log(result))
-    navigation.navigate("Otp")
+    // navigation.navigate("Otp")
 
       .catch(error => console.log('error', error));
 
@@ -80,7 +81,7 @@ export default function Forgot({ navigation }) {
 
         </View>
 
-        <TouchableOpacity onPress={handlePassword}>
+        <TouchableOpacity onPress={()=>navigation.navigate("Otp")}>
           <View style={{ alignItems: 'center', marginTop: 80, borderRadius: 20, borderWidth: 1, padding: 20, backgroundColor: '#3672E9', borderColor: '#1589FF', width: '90%' }}>
             <Text style={{ color: '#BFF4FF', fontSize: 18, fontFamily: 'Poppins-Regular', fontWeight: '500' }}>Submit</Text>
           </View>

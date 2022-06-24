@@ -6,6 +6,8 @@ import Simple from 'react-native-vector-icons/SimpleLineIcons';
 // import OtpInputs from 'react-native-otp-inputs';
 // import OTPInputView from '@twotalltotems/react-native-otp-input';
 import LinearGradient from 'react-native-linear-gradient';
+import OTPInputView from '@twotalltotems/react-native-otp-input'
+
 
 
 import {
@@ -17,39 +19,57 @@ import {
 
 
 
-export default function App() {
+export default function App({ navigation }) {
 
   const pin1Ref = useRef(null);
   const pin2Ref = useRef(null);
   const pin3Ref = useRef(null);
   const pin4Ref = useRef(null);
 
-  const [pin1, setPin1] = useState(false);
-  const [pin2, setPin2] = useState(false);
-  const [pin3, setPin3] = useState(false);
-  const [pin4, setPin4] = useState(false);
+  const [pin1, setPin1] = useState("0");
+  const [pin2, setPin2] = useState("0");
+  const [pin3, setPin3] = useState("0");
+  const [pin4, setPin4] = useState("0");
+  const _onChangeText = (val, setOpt, preRef = null, nextRef = null) => {
+    setOpt(val)
+    if (val.length) {
+        if (nextRef) {
+            nextRef.current.focus()
+        }
+    } else {
+        if (preRef) {
+            preRef.current.focus()
+        }
+    }
+}
+const pin = pin1+pin2+pin3+pin4
+console.log(pin)
 
-  // const ForgotPassword = () =>{
-  //   var myHeaders = new Headers();
-  //   myHeaders.append("Content-Type", "application/json");
+
+
+  const ForgotPassword = () =>{
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
     
-  //   var raw = JSON.stringify({
-  //     "code": 6266
-  //   });
+    var raw = JSON.stringify({
+      "code": pin
+    });
     
-  //   var requestOptions = {
-  //     method: 'POST',
-  //     headers: myHeaders,
-  //     body: raw,
-  //     redirect: 'follow'
-  //   };
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
     
-  //   fetch("http://13.127.119.21:5000/user/otp-verification", requestOptions)
-  //     .then(response => response.json())
-  //     .then(result => console.log(result))
-  //     .catch(error => console.log('error', error));
+    fetch("http://13.127.119.21:5000/user/otp-verification", requestOptions)
+      .then(response => response.json())
+      .then(result =>  console.log("perfect",result))
+
+
+      .catch(error => console.log('error', error));
     
-  // }
+  }
 
  
 
@@ -93,13 +113,15 @@ export default function App() {
             ref={pin1Ref}
             keyboardType={'number-pad'}
             maxLength={1}
-            onChange={(pin1) => {
-              setPin1(pin1);
-              if (pin1 != "") {
-                pin2Ref.current.focus();
-              }
+            onChangeText={(text) => _onChangeText(text, setPin1, null, pin2Ref)}
+            // onChange={(pin1) => {
+            //   setPin1(pin1);
+            //   console.log(pin1)
+            //   if (pin1 != "") {
+            //     pin2Ref.current.focus();
+            //   }
 
-            }}
+            // }}
             style={styles.TextInputText}
           />
 
@@ -110,12 +132,13 @@ export default function App() {
             ref={pin2Ref}
             keyboardType={'number-pad'}
             maxLength={1}
-            onChange={(pin2) => {
-              setPin2(pin2);
-              if (pin2 != "") {
-                pin3Ref.current.focus();
-              }
-            }}
+            onChangeText={(text) => _onChangeText(text, setPin2, pin1Ref, pin3Ref)}
+            // onChange={(pin2) => {
+            //   setPin2(pin2);
+            //   if (pin2 != "") {
+            //     pin3Ref.current.focus();
+            //   }
+            // }}
             style={styles.TextInputText}
           />
 
@@ -127,12 +150,13 @@ export default function App() {
 
             keyboardType={'number-pad'}
             maxLength={1}
-            onChange={(pin3) => {
-              setPin3(pin3);
-              if (pin3 != "") {
-                pin4Ref.current.focus();
-              }
-            }}
+            onChangeText={(text) => _onChangeText(text, setPin3, pin2Ref, pin4Ref)}
+            // onChange={(pin3) => {
+            //   setPin3(pin3);
+            //   if (pin3 != "") {
+            //     pin4Ref.current.focus();
+            //   }
+            // }}
             style={styles.TextInputText}
           />
 
@@ -143,9 +167,10 @@ export default function App() {
             ref={pin4Ref}
             keyboardType={'number-pad'}
             maxLength={1}
-            onChange={(pin4) => {
-              setPin4(pin4);
-            }}
+            onChangeText={(text) => _onChangeText(text, setPin4, pin3Ref, null)}
+            // onChange={(pin4) => {
+            //   setPin4(pin4);
+            // }}
             style={styles.TextInputText}
           />
 
@@ -186,7 +211,7 @@ export default function App() {
     })}
 /> */}
 
-<TouchableOpacity>
+<TouchableOpacity onPress={ForgotPassword}>
       <View style={{ alignItems: 'center', marginTop: 80, borderRadius: 20, borderWidth: 1, padding: 20, backgroundColor: '#0164FF', borderColor: '#1589FF', width: '90%' }}>
         <Text style={{ color: '#BFF4FF', fontSize: 18, fontFamily: 'Poppins-Regular', fontWeight: '500' }}>Submit</Text>
       </View>

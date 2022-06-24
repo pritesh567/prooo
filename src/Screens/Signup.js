@@ -60,8 +60,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://13.127.119.2\
-:5000/user/signup", requestOptions)
+fetch("http://13.127.119.21:5000/user/signup", requestOptions)
   .then(response => response.json())
   .then(result => console.log(result))
 

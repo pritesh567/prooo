@@ -9,15 +9,7 @@ import { PESDK } from 'react-native-photoeditorsdk';
 // PESDK.unlockWithLicense(require('./pesdk_license'));
 import ImagePicker, { openPicker } from 'react-native-image-crop-picker';
 
-
-
-
 const Dpdesign = () => {
-
-
-
-
-
     return (
         <>
             <View style={{ marginLeft: 12, borderRadius: 200, height: 48, width: 48, borderWidth: 1, backgroundColor: 'rgba(196, 196, 196, 0.98)' }}>
@@ -26,8 +18,6 @@ const Dpdesign = () => {
         </>
     )
 }
-
-
 
 const Dpcreateone = ({ navigation }) => {
 
@@ -58,16 +48,12 @@ const Dpcreateone = ({ navigation }) => {
             PESDK.openEditor(image.path);
             // console.log(fileName);
           
-        }).then(fileName=>{
-           
-
-
-
         })
-
-            .catch((e) => console.log(e))
-
-
+        // .then(fileName=>{
+            .then(image => {
+                navigation.navigate("DpFinal", { img: image });
+ })
+            // .catch((e) => console.log(e))
     };
     // saveImage(data:{source:string,fileName:string}) {
 
@@ -155,8 +141,8 @@ const Dpcreateone = ({ navigation }) => {
                     
                     PESDK.openEditor((require("../../assets/standman.png")), [
                         PESDK.transformTool,
-                        PESDK.filterTool,
-                        PESDK.focusTool,
+                        // PESDK.filterTool,
+                        // PESDK.focusTool,
                         PESDK.adjustTool,
                         PESDK.textTool,
                         PESDK.stickerTool,
@@ -165,7 +151,7 @@ const Dpcreateone = ({ navigation }) => {
                         PESDK.magic
                       ], )
                       .then((imagePath) => console.log(imagePath))
-                      .catch((err) => console.error(err));
+                      
 
 
                 }}>

@@ -31,7 +31,7 @@ import Forgot from './src/Screens/Forgot'
 import Reset from './src/Screens/Reset'
 import Dpcreator from './src/Screens/Dpcreator'
 import Otp from './src/Screens/Otp'
-
+import DpFinal from './src/Screens/DpFinal'
 
 
 
@@ -63,7 +63,8 @@ function App() {
       
       <Stack.Screen options={{ headerShown: false }} name="Login" component={Login} />
       <Stack.Screen options={{ headerShown: false }} name="Dpcreator" component={Dpcreator} />
-
+      
+      <Stack.Screen options={{ headerShown: false }} name="DpFinal" component={DpFinal} />
       <Stack.Screen options={{ headerShown: false }} name="Signup" component={Signup} />
       <Stack.Screen options={{ headerShown: false }} name="Forgot" component={Forgot} />
       <Stack.Screen options={{ headerShown: false }} name="Reset" component={Reset} />

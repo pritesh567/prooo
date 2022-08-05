@@ -77,7 +77,7 @@ const Homepage = ({ navigation, route }) => {
 
 
     const handleLougout = ()=>{
-        logout();
+        // logout();
         navigation.navigate("Login");
     }
     

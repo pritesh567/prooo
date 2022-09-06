@@ -32,6 +32,25 @@ import Reset from './src/Screens/Reset'
 import Dpcreator from './src/Screens/Dpcreator'
 import Otp from './src/Screens/Otp'
 import DpFinal from './src/Screens/DpFinal'
+import DpTwo from './DP/DpTwo'
+import Dpone from './DP/Dpone';
+
+
+// 9gird
+import Upload from './9Grid/Upload'
+import NoCropBox from './9Grid/NoCropBox'
+import Header from './9Grid/Header'
+  import SwipePick from './SwipePick'
+  import Swipe1 from './Swipe1'
+  import Swipe2 from './Swipe2'
+  import Swipe3 from './Swipe3'
+  import Sample from './9Grid/Sample';
+  import Sample2 from './9Grid/Sample2';
+
+import Sample3 from './9Grid/Sample3';
+
+
+
 
 
 
@@ -59,7 +78,7 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-      {/* <Stack.Screen options={{ headerShown: false }} name="Swipephoto" component={Swipephoto} /> */}
+      
       
       <Stack.Screen options={{ headerShown: false }} name="Login" component={Login} />
       <Stack.Screen options={{ headerShown: false }} name="Dpcreator" component={Dpcreator} />
@@ -74,8 +93,20 @@ function App() {
       <Stack.Screen options={{ headerShown: false }} name="Homepage" component={Homepage} />
 
 
+      <Stack.Screen options={{ headerShown: false }} name="Upload" component={Upload} />
+      <Stack.Screen options={{ headerShown: false }} name="NoCropBox" component={NoCropBox} />
+      <Stack.Screen options={{ headerShown: false }} name="Sample3" component={Sample3} />
+      <Stack.Screen options={{ headerShown: false }} name="Sample2" component={Sample2} />
+      <Stack.Screen options={{ headerShown: false }} name="Sample" component={Sample} />
+
+      <Stack.Screen options={{ headerShown: false }} name="SwipePick" component={SwipePick} />
+      <Stack.Screen options={{ headerShown: false }} name="Swipe1" component={Swipe1} />
+      <Stack.Screen options={{ headerShown: false }} name="Swipe2" component={Swipe2} />
+      <Stack.Screen options={{ headerShown: false }} name="Swipe3" component={Swipe3} />
 
 
+      <Stack.Screen options={{ headerShown: false }} name="Dpone" component={Dpone} />
+      <Stack.Screen options={{ headerShown: false }} name="DpTwo" component={DpTwo} />
         <Stack.Screen options={{ headerShown: false }} name="Instalogin" component={Instalogin} />
         {/* <Stack.Screen options={{ headerShown: false }} name="Flogin" component={Flogin} /> */}
         <Stack.Screen options={{ headerShown: false }} name="Mylogin" component={Mylogin} />

@@ -29,7 +29,7 @@
     "react-native-axios": "^0.17.1",
     "react-native-fs": "^2.19.0",
     "react-native-image-crop-picker": "^0.37.3",
-    "react-native-image-rotate": "^2.1.0",
+    "react-native-images-collage": "^3.3.5",
     "react-native-instagram-login": "^2.0.5",
     "react-native-linear-gradient": "^2.5.6",
     "react-native-material-design": "^0.3.7",

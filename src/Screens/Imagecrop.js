@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AmazingCropper from 'react-native-amazing-cropper';
+// import AmazingCropper from 'react-native-amazing-cropper';
 // import CustomCropperFooter from './src/components/CustomCropperFooter.component';
 
 class Imagecrop extends Component {
